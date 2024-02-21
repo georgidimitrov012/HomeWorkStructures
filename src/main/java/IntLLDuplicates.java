@@ -20,5 +20,6 @@ public class IntLLDuplicates {
             }
         }
         System.out.println(newList);
+
     }
 }
