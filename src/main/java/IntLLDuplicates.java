@@ -11,21 +11,14 @@ public class IntLLDuplicates {
         numbers.add(2);
         numbers.add(2);
 
-        int starter = 0;
-        for (int digits : numbers) {
-            System.out.println("DIGITS " + digits);
-            System.out.println("STARTER " + starter);
-            if (digits != starter) {
-                System.out.println(digits);
+        LinkedList<Integer> newList = new LinkedList<Integer>();
+        for (int newNumbers : numbers) {
+            if (newList.contains(newNumbers)) {
+                System.out.println("Вече имаме числото: " + newNumbers);
             } else {
-                System.out.println("SKIPWAM");
+                newList.add(newNumbers);
             }
-            System.out.println("___________________");
-            starter = digits;
-            System.out.println("DIGITS1 " + digits);
-            System.out.println("STARTER1 " + starter);
-
-            System.out.println("=====NOV RED=====");
         }
+        System.out.println(newList);
     }
 }
